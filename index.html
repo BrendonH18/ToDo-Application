@@ -12,26 +12,18 @@
     <div class="header">
       <h1>Truly Productive: To-Do Task List</h1>
       <h2>Create Task</h2>
-    </div>   
-  
+    </div>
   <form id="taskForm">
     <label for="formTaskText">Task:</label>
-    <input type="text" id="formTaskText" placeholder="Your Task" required> 
-    <!-- should I add target="_self"?? probably not-->
-    
+    <input type="text" id="formTaskText" placeholder="Your Task" required>
     <label for="dueDate">Due Date:</label>
-    <input type="datetime-local" name="dateTime" id="formDueDate" placeholder="">
-    
+    <input type="date" name="dateTime" id="formDueDate" placeholder="">
     <input type="submit" name="" id="form-submit" value="Add to List">
-
-    <input type="button" value="Clear All Tasks">
-
+    <input type="button" id="clearall" value="Clear All Tasks">
   </form>
-  <!-- <img src="Letsdoit.jpg" alt="">   -->
-  <div class="body" >
-    <!-- maybe use: <table> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table https://www.codemag.com/article/1511031/CRUD-in-HTML-JavaScript-and-jQuery-->
+  <br>
+  <div class="body">
       <table id="taskTable">
-        
         <thead>  
           <tr>
             <th>Actions</th>
@@ -39,72 +31,50 @@
             <th>Due Date</th>
           </tr>
         </thead>
-        <tbody>
-          <tr id="0">
-            <td>
-              
-              <button class="Checked Complete" onclick=""><img src="done.jpg" alt=""></button>
-              <button class="Unchecked Incomplete" ><img src="notdone.png" alt=""></button>
-              <button class="Remove Incomplete"><img src="delete.jpg" alt=""></button>
-              <!-- onclick="toggleTaskComplete1(this.parentNode.parentNode.className, this.className)" -->
-              
-              <!-- <button class="Checked Complete" id="0" onclick="toggleTaskComplete(this)"><img src="done.jpg" alt=""></button>
-              <button class="Unchecked Incomplete" id="0" onclick="toggleTaskComplete(this)"><img src="notdone.png" alt=""></button>
-              <button class="Cancel Incomplete" id="0" onclick="toggleDelete(this)"><img src="delete.jpg" alt=""></button> -->
-            </td>
-            <td class="Description Incomplete" id="0">Task Description</td>
-            <td class="Date Incomplete" id="0">Due Date</td>
-          </tr>
-
-          <tr id="1">
-            <td>
-              <button class="Checked Complete"><img src="done.jpg" alt=""></button>
-              <button class="Unchecked Incomplete"><img src="notdone.png" alt=""></button>
-              <button class="Remove Incomplete"><img src="delete.jpg" alt=""></button>
-            </td>
-            <td class="Description Incomplete">Task Description 2</td>
-            <td class="Date Incomplete">Due Date 2</td>
-          </tr>
-
-          <tr>
-            <!-- <td><button class="taskDone" name="taskDone" id="1" onclick="toggleTaskComplete(this)" style="display: none;"><img src="done.jpg" alt=""></button>
-              <button class="taskNotDone" name="taskNotDone" id="1" onclick="toggleTaskComplete(this)" style="display: none;"><img src="notdone.png" alt=""></button>
-              <button class="taskDelete" name="taskDelete" id="taskDelete" onclick="" style="display: none;"><img src="delete.jpg" alt=""></button></td>
-            <td>5</td>
-            <td>6</td> -->
-          </tr>
+        <tbody> 
         </tbody>
-        <caption>Mega Productivity and Good Vibes</caption>
       </table>
-
-
-
+      <br>
+      <br>
+      <div>Mega Productivity and Good Vibes</div>
   </div>  
 </div>
-
-
-    
-    <!-- <p>
-      Select Importance
-    </p>
-
-    <input type="radio" name="form-importance" value="Low" id="form-importance-low">
-    <label for="form-inportance-low" required>Low</label>
-
-    <input type="radio" name="form-importance" value="Medium" id="form-importance-Medium">
-    <label for="form-inportance-Medium" required>Medium</label>
-
-    <input type="radio" name="form-importance" value="High" id="form-importance-High">
-    <label for="form-inportance-High" required>High</label> -->
-
-    
-
-  
-
-  
-
-  <script src="script.js"></script>
-
-  
+<script src="script.js"></script>
 </body>
 </html>
+
+<!-- Pieces of HTML that I used along the way
+maybe use: <table> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table https://www.codemag.com/article/1511031/CRUD-in-HTML-JavaScript-and-jQuery
+
+<tr>
+  <td>
+    <button class="Checked Complete"><img src="done.jpg" alt=""></button>
+    <button class="Unchecked Incomplete" ><img src="notdone.png" alt=""></button>
+    <button class="Remove Incomplete"><img src="delete.jpg" alt=""></button>
+    onclick="toggleTaskComplete1(this.parentNode.parentNode.className, this.className)"
+    
+    <button class="Checked Complete" id="0" onclick="toggleTaskComplete(this)"><img src="done.jpg" alt=""></button>
+    <button class="Unchecked Incomplete" id="0" onclick="toggleTaskComplete(this)"><img src="notdone.png" alt=""></button>
+    <button class="Cancel Incomplete" id="0" onclick="toggleDelete(this)"><img src="delete.jpg" alt=""></button>
+  </td>
+  <td class="Description Incomplete">Task Description</td>
+  <td class="Date Incomplete">Due Date</td>
+</tr>
+
+<tr>
+  <td>
+    <button class="Checked Complete"><img src="done.jpg" alt=""></button>
+    <button class="Unchecked Incomplete"><img src="notdone.png" alt=""></button>
+    <button class="Remove Incomplete"><img src="delete.jpg" alt=""></button>
+  </td>
+  <td class="Description Incomplete">Task Description 2</td>
+  <td class="Date Incomplete">Due Date 2</td>
+</tr>
+
+<tr>
+  <td><button class="taskDone" name="taskDone" id="1" onclick="toggleTaskComplete(this)" style="display: none;"><img src="done.jpg" alt=""></button>
+    <button class="taskNotDone" name="taskNotDone" id="1" onclick="toggleTaskComplete(this)" style="display: none;"><img src="notdone.png" alt=""></button>
+    <button class="taskDelete" name="taskDelete" id="taskDelete" onclick="" style="display: none;"><img src="delete.jpg" alt=""></button></td>
+  <td>5</td>
+  <td>6</td>
+</tr> -->

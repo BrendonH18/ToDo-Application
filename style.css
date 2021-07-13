@@ -2,20 +2,43 @@ div.container {
   text-align: center;
   border: 2px solid orange;
   border-radius: 40px;
+  background-color: rgb(251, 255, 248);
 }
 
-div.container table {
-  text-align: center;
+#taskForm > label {
+  font-weight: bold;
 }
 
-body > div > div.body > table > tbody > tr > td > button > img:nth-child(1) {
+body > div > div.body > div {
+  font-weight: bold;
+}
+
+#taskTable {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  background-color: lightgoldenrodyellow;
+}
+
+#taskTable > thead > tr:nth-child(1) {
+  background-color: darkcyan;
+  color: ivory;
+}
+
+#taskTable > thead {
+  font-size: 20px;
+  
+}
+
+#taskTable > tbody > tr > td > button > img {
   /* align-content: ; */
   left: 0px;
   top: 3px;
   height: 20px;
   width: 20px;
 }
-body > div > div.body > table > tbody > tr > td > img:nth-child(2) {
+
+/* body > div > div.body > table > tbody > tr > td > img:nth-child(2) {
   left: 0px;
   top: 0px;
   height: 16px;
@@ -27,7 +50,7 @@ body > div > div.body > table > tbody > tr > td > img:nth-child(3) {
   top: 0px;
   height: 20px;
   width: 20px;
-}
+} */
 
 button.Incomplete {
   display: inline;
@@ -35,9 +58,9 @@ button.Incomplete {
 button.Complete {
   display: none
 }
-button.Delete {
+/* button.Delete {
   display: none
-}
+} */
 
 td.Incomplete {
   text-decoration: initial;
@@ -46,6 +69,6 @@ td.Complete {
   text-decoration: line-through;
 }
 
-td.Delete {
+/* td.Delete {
   display: none;
-}
+} */
