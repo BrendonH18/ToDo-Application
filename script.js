@@ -261,7 +261,7 @@ function deleteAllTasks () {
   for (let i = rows; i > 1; i--) {
     rowClass = table.rows[i-1].cells[1].className
     // .cells[1].className
-    console.log(rowClass)
+    // console.log(rowClass)
     if (rowClass == "Description Complete") {
       table.deleteRow(i-1)
     }
