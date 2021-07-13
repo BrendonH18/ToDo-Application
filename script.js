@@ -103,6 +103,13 @@ function toggleTask (elementClicked, isToggle, rowIndex) {
   //if isToggle is [false] then the "class" must contain [Remove] and it must be the red circle 
   } else {
     
+    //check if task is complete
+    if(textDescription.className == "Description Complete") {
+    } else {
+      alert("Sorry. Please complete the task before deleting it. ~The Warden")
+      return
+    }
+
    //#region  //check
     // console.log("Delete")
     //#endregion
@@ -252,7 +259,12 @@ function deleteAllTasks () {
   isExecute = confirm("Are you sure you want to delete all your tasks?")
   if (isExecute == true) {
   for (let i = rows; i > 1; i--) {
-    table.deleteRow(i-1)
+    rowClass = table.rows[i-1].cells[1].className
+    // .cells[1].className
+    console.log(rowClass)
+    if (rowClass == "Description Complete") {
+      table.deleteRow(i-1)
+    }
   }
 }
 }
