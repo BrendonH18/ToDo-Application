@@ -38,37 +38,7 @@ body > div > div.body > div {
   width: 20px;
 }
 
-/* body > div > div.body > table > tbody > tr > td > img:nth-child(2) {
-  left: 0px;
-  top: 0px;
-  height: 16px;
-  width: 16px;
-}
 
-body > div > div.body > table > tbody > tr > td > img:nth-child(3) {
-  left: 0px;
-  top: 0px;
-  height: 20px;
-  width: 20px;
-} */
-
-button.Incomplete {
-  display: inline;
-}
-button.Complete {
-  display: none
-}
-/* button.Delete {
-  display: none
-} */
-
-td.Incomplete {
-  text-decoration: initial;
-}
-td.Complete {
+.done {
   text-decoration: line-through;
 }
-
-/* td.Delete {
-  display: none;
-} */
